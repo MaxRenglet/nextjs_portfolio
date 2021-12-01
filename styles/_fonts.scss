@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+
+$fontPrimary : 'Spartan', sans-serif;
+$fontMono : 'Source Code Pro', monospace;
+
+h1 {
+    font-family: $fontPrimary;
+    font-size: 70px;
+    font-weight: bolder;
+    color: $black;
+}
+
+h2 {
+    font-family: $fontPrimary;
+}
+
+.mono {
+    font-family: $fontMono;
+    font-size: 16px;
+
+    h1 {
+        font-size: 40px;
+    }
+
+}

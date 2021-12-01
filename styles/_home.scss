@@ -1,0 +1,27 @@
+.homepage {
+    .hero {
+        // border: 1px solid $black;
+        // padding: 100px;
+        padding-bottom: 150px;
+        position: relative;
+        &:after {
+            position: absolute;
+            left: 0; 
+            right: 0; 
+            margin-left: auto; 
+            margin-right: auto; 
+            bottom: 0px;
+            content:"";
+            width: 50%;
+            height: 1px;
+            background: lightgrey;
+        }
+        .columns {
+            margin-top: 100px;
+        }
+    }
+
+    .projects {
+        padding-top: 100px;
+    }
+}

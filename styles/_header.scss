@@ -1,0 +1,52 @@
+.header {
+    font-family: $fontPrimary;
+    color: $black;
+
+    a {
+        font-family: $fontMono;
+        color: $black;
+        position: relative;
+        line-height: 1.2;
+        padding: 0px;
+        margin-right: 20px;
+        transition: all 0.3s ease;
+        font-size:16px;
+
+        &:hover {
+            color: $blue;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .logo {
+        a {
+            font-family: $fontPrimary;
+            font-size: 40px;
+            font-weight: 700;
+
+            &:after {
+                position: absolute;
+                content: "";
+                left: 0px;
+                bottom: 0px;
+                width: 10%;
+                height: 3px;
+                background: $black;
+                transition: all 0.3s ease;
+            }
+
+            &:hover {
+                color: $blue;
+                background: transparent;
+                transition: all 0.3s ease;
+
+                &:after {
+                    width: 100%;
+                    transition: all 0.3s ease;
+                    background: $blue;
+                }
+            }
+        }
+    }
+}

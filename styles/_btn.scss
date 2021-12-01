@@ -1,0 +1,52 @@
+.btn {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-top:150px;
+    margin-bottom: 100px;
+
+    .btn-label {
+        position: relative;
+        z-index: 5;
+        transition: all 0.8s ease;
+        color: $blue;
+        
+        
+    }
+
+    svg {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        height: 0%;
+        width: 100%;
+        z-index: 1;
+        transition: all 0.8s ease;
+        path {
+            height: auto;
+            width: auto;
+            fill: $blue;
+           
+        }
+
+    }
+
+    &:hover {
+       svg {
+        height: 600%;
+            transition: all 0.8s ease;
+       }
+       .btn-label {
+           color: white;
+           transition: all 0.8s ease;
+       }
+    }
+
+    &.btn-large {
+        font-size: 60px;
+        font-weight: bolder;
+        font-family: $fontPrimary;
+    }
+}

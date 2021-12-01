@@ -1,0 +1,119 @@
+.project_card {
+    margin-top: 100px;
+    display: block;
+    // border: 1px solid rgba($lightblue,0);
+    border-radius: 20px;
+    padding: 50px 80px;
+    position: relative;
+    overflow:hidden;
+    box-shadow: 0px 0px 0px rgba(#EBEBEB, 0);
+    background-color: transparent;
+    transition: all 1.2s ease;
+    img {
+      border-radius: 10px;
+    }
+
+    .svg_bg {
+      // height: 0px;
+      position: absolute;
+      bottom: -1px;
+      left: 0px;
+      width: 100%;
+      height: 0%;
+      z-index: 1;
+      transition: all 1.2s ease;
+      path {
+
+
+        // transition: all 1.2s ease;
+        fill: rgba($lightblue,0.7);
+        // fill: transparent;
+        height: auto;
+        width: auto;
+      }
+    }
+
+    &:hover {
+
+      box-shadow:0px 5px 20px #EBEBEB;
+      // background-color: rgba(#E5EAFA,0.5);
+      // background-color: rgba(#08A4BD,0.1);
+      // background-color: rgba(#F3F3F3, 0.5);
+      transition: all 1.2s ease;
+  //  border: 1px solid rgba($lightblue,1);
+      .svg_bg {
+        transition: all 1.2s ease;
+        height: 100%;
+        path {
+          fill: rgba($lightblue,0.7);
+          
+          transition: all 1.2s ease;
+        }
+
+      
+      }
+    }
+
+    h1 {
+      position: relative;
+      z-index: 5;
+    }
+    .columns {
+      position: relative;
+      z-index: 5;
+        .infos {
+          text-align: right;
+          font-family: $fontMono;
+
+          .readmore {
+            margin-top: 30px;
+            background: transparent;
+            border: 1px solid $blue;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: $fontMono;
+            color: $blue;
+          }
+          
+          .date {
+            //   font-style: italic;
+            font-weight: bolder;
+            opacity: 0.7;
+          }
+          p {
+            //   font-family: $fontMono;
+              font-size: 15px;
+          }
+          .categories {
+              display: flex;
+              margin-bottom: 30px;
+              margin-top: 20px;
+              justify-content: flex-end;
+              li {
+                  background: $blue;
+                  border-radius: 5px;
+                  color: white;
+                  padding: 5px 10px;
+                  margin-left: 10px;
+              }
+          }
+        }
+    }
+
+
+    .reverse-columns {
+        .infos {
+            text-align: left;
+
+            .categories {
+                justify-content: flex-start;
+                li {
+                    margin-right: 10px;
+                    margin-left: 0px;
+                }
+            }
+            
+          }
+    }
+
+}

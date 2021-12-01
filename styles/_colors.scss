@@ -1,0 +1,26 @@
+$blue : #00d1b2;
+$lightblue : rgb(178, 241, 232);
+// $lightblue : lighten($blue, 30);
+
+body,
+html {
+    min-height: 100vh;
+    background-color: #fff;
+    // background-color: rgba($lightblue,0.7);
+    overflow-x: hidden;
+}
+
+p {
+    a {
+    color: $blue;
+    font-weight: bold;
+    &:hover {
+        text-decoration: overline;
+        color: $blue;
+    }
+}
+}
+
+a {
+    color: inherit;
+}
