@@ -28,14 +28,13 @@ function MyApp({ Component, pageProps, router }) {
   return (
 
     <>
+
             <Head>
               <title>{title}</title>
             </Head>
-            <main className="container is-fluid pt-6">
+           
 
-            {
-        process.browser ?
-          <>
+           <main className="container is-fluid pt-6">
               <AnimatePresence exitBeforeEnter>
 
                 <motion.div
@@ -54,11 +53,10 @@ function MyApp({ Component, pageProps, router }) {
 
 
               </AnimatePresence>
-              </>
-          :
-          null
-      }
-            </main>
+              </main>
+              
+        
+           
          
     </>
 

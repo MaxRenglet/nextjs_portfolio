@@ -1,12 +1,9 @@
 import React from 'react';
-import axios from 'axios';
 import ReactMarkdown from 'react-markdown'
-import Link from 'next/link'
-import HProjects from '../components/hp_projects';
 import CardProject from '../components/CardProject'
 import Button from '../components/Button';
-import Fade from 'react-reveal/Fade';
-
+import { Fade } from "react-awesome-reveal";
+import Img from '../components/Img';
 function Home({ page, projects, url }) {
 
 
@@ -25,7 +22,7 @@ function Home({ page, projects, url }) {
 
   return (
     <section className="container is-max-widescreen homepage pt-6">
-      <Fade left big cascade>
+      <Fade>
       <section className="hero">
       <h1>{title}</h1>
         <div className="columns">

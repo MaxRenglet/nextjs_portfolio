@@ -1,10 +1,13 @@
 import React, {Component} from 'react'
-
+import { Fade } from "react-awesome-reveal";
 
 class Footer extends React.Component {
   render() {
     return (
 
+      <Fade
+      direction="up"
+      >
       <footer className="footer">
         <div className="columns">
         <div className="column">
@@ -24,6 +27,7 @@ class Footer extends React.Component {
         </div>
       </footer>
 
+      </Fade>
     );
   }
 }

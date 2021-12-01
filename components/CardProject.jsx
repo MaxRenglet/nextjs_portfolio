@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import Link from 'next/link'
 import Date from 'date-and-time';
 import SVG from './Svg';
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 
 class CardProjects extends React.Component {
 
@@ -34,9 +34,14 @@ class CardProjects extends React.Component {
         return (
 
             <Link href={`/projects/${slug}`}>
+                 <a>
                 {k % 2 ?
-                 <Fade left  cascade>
-                    <a className="project_card">
+                 <Fade
+                 cascade={true}
+                 direction="left"
+                 triggerOnce={true}
+                 >
+                   <div className="project_card">
                         <h1>{title}</h1>
 
 
@@ -52,11 +57,15 @@ class CardProjects extends React.Component {
                             </div>
                         </div>
                         <SVG />
-                    </a>
+                        </div>
                     </Fade>
                     :
-                    <Fade right  cascade>
-                    <a className="project_card">
+                    <Fade
+                    cascade={true}
+                    direction="right"
+                    triggerOnce={true}
+                    >
+                        <div className="project_card">
                         <h1>{title}</h1>
                         <div className="columns is-vcentered">
                             <div className="column infos">
@@ -70,12 +79,11 @@ class CardProjects extends React.Component {
                             </div>
                         </div>
                         <SVG />
-                    </a>
+                        </div>
                     </Fade>
                 }
 
-
-
+</a>
 
             </Link>
        
