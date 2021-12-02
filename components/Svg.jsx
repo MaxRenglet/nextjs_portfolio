@@ -194,6 +194,7 @@ let svgs = [
 
 let id = Math.floor((Math.random()*svgs.length));
 
+
   return (
 
   <div className="svg" data-id={id}>

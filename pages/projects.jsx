@@ -1,31 +1,37 @@
 import ReactMarkdown from 'react-markdown'
 import CardProject from '../components/CardProject'
+import Link from 'next/dist/client/link';
+import ListingProjects from '../components/ListingProject';
 
-export default function Page({page, projects, url}) {
+export default function Page({ page, projects, url, categories }) {
 
-  const {title, description} = page;
+  const { title, description } = page;
 
-  const _projects = projects.map((project,index) => (
-    <CardProject
-      key={index}
-      k={index}
-      url={url}
-      project={project}
-    />
-  ));
+  // let _projects = projects.map((project, index) => (
+  //   <CardProject
+  //     key={index}
+  //     k={index}
+  //     url={url}
+  //     project={project}
+  //   />
+  // ));
 
 
   return (
     <section className="container is-max-widescreen projects pt-6">
-   <h1>{title}</h1>
-    <ReactMarkdown>{description}</ReactMarkdown>
-
-    {_projects}
-
+      <h1>{title}</h1>
+     
+      <ReactMarkdown>{description}</ReactMarkdown>
 
 
+      <ListingProjects 
+      projects={projects}
+      categories={categories}
+      url={url}
+      />
 
- </section>
+
+    </section>
   )
 }
 
@@ -41,9 +47,13 @@ export async function getStaticProps(context) {
   const res_ = await fetch(`${process.env.ADMIN_URL}/projects`);
   const projects = await res_.json();
 
+  const res__ = await fetch(`${process.env.ADMIN_URL}/categories`);
+  const categories = await res__.json();
+
 
   return {
     props: {
+      categories,
       page,
       projects,
       url

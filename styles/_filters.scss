@@ -1,0 +1,63 @@
+.filters {
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+    li {
+        list-style: none;
+        margin-right:10px;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        &:after {
+            content:"";
+            height:1px;
+            position: absolute;
+            left: 0px;
+            bottom: -7px;
+            width: 0%;
+            background: $black;
+            transition: all 0.4s ease;
+        }
+        &:hover {
+            transition: all 0.4s ease;
+            &:after {
+                content:"";
+                height:1px;
+                position: absolute;
+                left: 0px;
+                bottom: -7px;
+                width: 100%;
+                background: $black;
+                transition: all 0.4s ease;
+            }
+        }
+        &.selected {
+            color: $blue;
+            cursor:auto;
+            transition: all 0.4s ease;
+            &:after {
+                content:"";
+                height:1px;
+                position: absolute;
+                left: 0px;
+                bottom: -7px;
+                width: 0%;
+                background: $blue;
+                transition: all 0.4s ease;
+            }
+            // &:hover {
+            //     transition: all 0.4s ease;
+            //     &:after {
+            //         content:"";
+            //         height:1px;
+            //         position: absolute;
+            //         left: 0px;
+            //         bottom: -7px;
+            //         width: 100%;
+            //         background: $blue;
+            //         transition: all 0.4s ease;
+            //     }
+            // }
+        }
+    }
+}

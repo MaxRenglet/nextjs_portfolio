@@ -65,6 +65,7 @@ function Home({ page, projects, url }) {
 export default Home;
 
 
+
 export async function getStaticProps(context) {
 
 

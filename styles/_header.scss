@@ -2,6 +2,10 @@
     font-family: $fontPrimary;
     color: $black;
 
+    .navbar-end {
+        align-items: center;
+    }
+
     a {
         font-family: $fontMono;
         color: $black;

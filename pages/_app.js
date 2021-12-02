@@ -28,7 +28,6 @@ function MyApp({ Component, pageProps, router }) {
   return (
 
     <>
-
             <Head>
               <title>{title}</title>
             </Head>
@@ -55,8 +54,7 @@ function MyApp({ Component, pageProps, router }) {
               </AnimatePresence>
               </main>
               
-        
-           
+      
          
     </>
 
